@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/home/dlog/bin/coda3t_logger.py", line 139, in <module>
+    main()
+  File "/home/dlog/bin/coda3t_logger.py", line 136, in main
+    logger.logData()
+  File "/home/dlog/bin/coda3t_logger.py", line 51, in logData
+    line = self.port.read_until()
+  File "/usr/local/lib/python3.9/dist-packages/serial/serialutil.py", line 663, in read_until
+    c = self.read(1)
+  File "/usr/local/lib/python3.9/dist-packages/pyftdi/serialext/protocol_ftdi.py", line 58, in read
+    buf = self.udev.read_data(size)
+  File "/usr/local/lib/python3.9/dist-packages/pyftdi/ftdi.py", line 1927, in read_data
+    return bytes(self.read_data_bytes(size))
+  File "/usr/local/lib/python3.9/dist-packages/pyftdi/ftdi.py", line 1845, in read_data_bytes
+    tempbuf = self._read()
+  File "/usr/local/lib/python3.9/dist-packages/pyftdi/ftdi.py", line 2099, in _read
+    raise FtdiError('UsbError: %s' % str(ex)) from None
+pyftdi.ftdi.FtdiError: UsbError: [Errno 16] Resource busy
